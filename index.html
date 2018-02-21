@@ -1,10 +1,219 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
+<html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+<link href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0-beta.3/darkly/bootstrap.min.css" rel="stylesheet" integrity="sha384-novkfxI48G9YvcamVHf01KL+Sm6JFherxeJKqUdbez8EoEsAued2k/cD43lYG+B1" crossorigin="anonymous">
 <body>
 
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+    <div class="w3-bar" id="myNavbar">
+        <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+            <i class="fa fa-bars"></i>
+        </a>
+        <a href="#home" class="w3-bar-item w3-button">HOME</a>
+        <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
+        <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> PORTFOLIO</a>
+        <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
+    </div>
+
+    <!-- Navbar on small screens -->
+    <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+        <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
+        <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">PORTFOLIO</a>
+        <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
+    </div>
+</div>
+
+<!-- First Parallax Image with Logo Text -->
+<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+    <div class="w3-display-middle w3-hide-small w3-hide-medium" style="white-space:nowrap;">
+        <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity" id="heroLogo" >It's a pleasure to meet you.</span>
+    </div>
+    <div class="w3-display-middle w3-hide-large" style="white-space:nowrap;">
+        <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity" >My Portfolio</span>
+    </div>
+</div>
+
+<!-- Container (About Section) -->
+<div class="w3-content w3-container w3-padding-64" id="about">
+    <h3 class="w3-center">ABOUT ME</h3>
+    <p class="w3-center"><em>I'm A Software Developer</em></p>
+    <p>
+        My name is Stephen Fetinko and I'm a software developer currently attending Nova Scotia Community College for a degree in programming.
+        Programming for me has always been a passion of mine and its existed ever since I can remember. It started
+        from playing around with HTML to edit home pages, and eventually it led me to learning more about the games
+        I loved and how they were made. My passion had fuel added to the fire at the end of high school when I took a
+        class that delved into Java and from there, I pursued learning everything possible about making anything from
+        desktop/mobile development to game development.
+    </p>
+    <div class="w3-row">
+        <div class="w3-col m6 w3-center w3-padding-large">
+            <p><b><i class="fa fa-user w3-margin-right"></i>Stephen Fetinko</b></p><br>
+            <img src="img/me.jpg" class="w3-round w3-image " alt="Photo of Me" width="500" height="333">
+        </div>
+
+        <!-- Hide this text on small devices -->
+        <div class="w3-col m6 w3-hide-small w3-padding-large">
+            <p>
+                Finding out how the world ticks was always something that interested me and figuring out complicated
+                puzzles is always an enjoyable experience. There's not a whole lot more that can be said about me.
+                I code a lot, I build computers and I drink a bunch of coffee. But I'm a hard worker who never leaves
+                a task undone, and I make sure that when I'm on a team I do everything possible to make everybody's
+                job easier. I love learning new things and if I find a website that's done a certain way or an application
+                that's done a unique way then I go out of my way to ensure I figure out how it works so I can learn more
+                and constantly improve. As an example, this site was built off of a <a href="https://www.w3schools.com/w3css/w3css_templates.asp">W3.CSS Template</a>
+                with a <a href="https://bootswatch.com/">bootswatch</a> theme that I worked to customize and make my own.
+            </p>
+            <br>
+            <p>My programming career has been and will be a journey. I've learned an incredible amount from my teachers
+                and my peers and I look forward to learning more and more about how the world works. At the end of the day,
+                I'm a software developer, and it's a pleasure to meet you.</p>
+        </div>
+    </div>
+    <p class="w3-large w3-center w3-padding-16">What I Use Most</p>
+    <p class="w3-wide w3-center w3-padding-16">
+        <i id="csharp" class="devicon-csharp-plain" title="C#"></i>
+        <i class="devicon-cplusplus-plain" id="cplusplus" title="C++"></i>
+        <i class="devicon-java-plain" id="java" title="Java"></i>
+        <i class="devicon-javascript-plain" id="javascript" title="Javascript"></i>
+        <i class="devicon-jetbrains-plain" id="jetbrains" title="Jetbrains"></i>
+        <i class="devicon-windows8-original" id="windows" title="Windows"></i>
+        <i class="devicon-ubuntu-plain" id="ubuntu" title="Ubuntu"></i>
+        <i class="devicon-android-plain" id="android" title="Android"></i>
+        <i class="devicon-github-plain-wordmark" id="github" title="Github"></i>
+    </p>
+    <!--<div class="w3-light-grey">-->
+        <!--<div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:90%">90%</div>-->
+    <!--</div>-->
+    <!--<div class="w3-light-grey">-->
+        <!--<div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:85%">85%</div>-->
+    <!--</div>-->
+    <!--<p class="w3-wide"><i class="fa fa-photo"></i>Photoshop</p>-->
+    <!--<div class="w3-light-grey">-->
+        <!--<div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:75%">75%</div>-->
+    <!--</div>-->
+</div>
+
+<!--<div class="w3-row w3-center w3-dark-grey w3-padding-16">-->
+    <!--<div class="w3-quarter w3-section">-->
+        <!--<span class="w3-xlarge">14+</span><br>-->
+        <!--Partners-->
+    <!--</div>-->
+    <!--<div class="w3-quarter w3-section">-->
+        <!--<span class="w3-xlarge">55+</span><br>-->
+        <!--Projects Done-->
+    <!--</div>-->
+    <!--<div class="w3-quarter w3-section">-->
+        <!--<span class="w3-xlarge">89+</span><br>-->
+        <!--Happy Clients-->
+    <!--</div>-->
+    <!--<div class="w3-quarter w3-section">-->
+        <!--<span class="w3-xlarge">150+</span><br>-->
+        <!--Meetings-->
+    <!--</div>-->
+<!--</div>-->
+
+<!-- Second Parallax Image with Portfolio Text -->
+<div class="bgimg-2 w3-display-container w3-opacity-min">
+    <div class="w3-display-middle">
+        <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide">PORTFOLIO</span>
+    </div>
+</div>
+
+<!-- Container (Portfolio Section) -->
+<div class="w3-content w3-container w3-padding-64" id="portfolio">
+    <h3 class="w3-center">MY WORK</h3>
+    <p class="w3-center"><em>Here's some of my current projects.<br> Click on the images to make them bigger</em></p><br>
+
+    <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+    <div class="w3-row-padding w3-center">
+        <div class="w3-col m3">
+            <img src="img/maze.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Maze Game In Javascript">
+        </div>
+
+        <div class="w3-col m3">
+            <img src="/w3images/p2.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Coffee beans">
+        </div>
+
+        <div class="w3-col m3">
+            <img src="/w3images/p3.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Bear closeup">
+        </div>
+
+        <div class="w3-col m3">
+            <img src="/w3images/p4.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Quiet ocean">
+        </div>
+    </div>
+
+    <div class="w3-row-padding w3-center w3-section">
+        <div class="w3-col m3">
+            <img src="/w3images/p5.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="The mist">
+        </div>
+
+        <div class="w3-col m3">
+            <img src="/w3images/p6.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="My beloved typewriter">
+        </div>
+
+        <div class="w3-col m3">
+            <img src="/w3images/p7.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Empty ghost train">
+        </div>
+
+        <div class="w3-col m3">
+            <img src="/w3images/p8.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Sailing">
+        </div>
+        <button class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px">LOAD MORE</button>
+    </div>
+</div>
+
+<!-- Modal for full size images on click-->
+<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+    <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+        <img id="img01" class="w3-image">
+        <p id="caption" class="w3-opacity w3-large"></p>
+    </div>
+</div>
+
+<!-- Third Parallax Image with Portfolio Text -->
+<div class="bgimg-3 w3-display-container w3-opacity-min">
+    <div class="w3-display-middle">
+        <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide">CONTACT</span>
+    </div>
+</div>
+
+<!-- Container (Contact Section) -->
+<div class="w3-content w3-container w3-padding-64" id="contact">
+    <h3 class="w3-center">WHERE I CAN BE FOUND</h3>
+
+    <div class="w3-row w3-padding-32 w3-section">
+        <div class="w3-large w3-margin-bottom w3-center" id="contactInfo">
+            <i class="fa fa-map-marker fa-fw w3-xlarge "></i> Halifax, NS<br>
+            <i class="fa fa-phone fa-fw w3-xlarge "></i> Phone: 902-802-2395<br>
+            <i class="fa fa-envelope fa-fw w3-xlarge "></i> Email: sfetinko@gmail.com<br>
+            <i class="fa fa-github"></i> Github: <a href="https://github.com/stephen-soul">https://github.com/stephen-soul</a><br>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+    <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+    <div class="w3-xlarge w3-section">
+        <i class="fa fa-facebook-official w3-hover-opacity"></i>
+        <i class="fa fa-instagram w3-hover-opacity"></i>
+        <i class="fa fa-snapchat w3-hover-opacity"></i>
+        <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+        <i class="fa fa-twitter w3-hover-opacity"></i>
+        <i class="fa fa-linkedin w3-hover-opacity"></i>
+    </div>
+    <p>Designed by <a href="https://ca.linkedin.com/in/stephen-fetinko-2671a1127">Stephen Fetinko</a>. Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+</footer>
+<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
